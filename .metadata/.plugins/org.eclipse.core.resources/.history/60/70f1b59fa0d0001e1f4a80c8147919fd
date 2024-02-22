@@ -1,0 +1,116 @@
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner lector = new Scanner(System.in);
+        double km, metros, cm, pulgadas;
+        int op;
+
+        do {
+            System.out.println(" === M E N U ===");
+            System.out.println(" 1. Kilometros");
+            System.out.println(" 2. Metros");
+            System.out.println(" 3. Centimetros");
+            System.out.println(" 4. Pulgadas");
+            System.out.println(" 5. Salir");
+            System.out.println();
+
+            System.out.print("Opcion: ");
+            op = lector.nextInt();
+            System.out.println("----------------------------");
+
+            switch (op) {
+                case 1:
+                    System.out.println(" === Conversion de Kilometros ===");
+                    System.out.print(" Kilometros: ");
+                    km = lector.nextDouble();
+
+                    metros = 1000 * km;
+                    cm = 100000 * km;
+                    pulgadas = 39370.1 * km;
+
+                    System.out.println(" " + km + " Km" + " = " + metros + " m ");
+                    System.out.println(" " + km + " Km" + " = " + cm + " cm ");
+                    System.out.println(" " + km + " Km" + " = " + pulgadas + " in ");
+                    System.out.println();
+
+                    System.out.println("Presione cualquier tecla para continuar...");
+                    lector.nextLine(); 
+                    lector.nextLine(); 
+                    break;
+
+                case 2:
+                    System.out.println(" === Conversion de Metros ===");
+                    System.out.print(" Metros: ");
+                    metros = lector.nextDouble();
+
+                    km = 0.001 * metros;
+                    cm = 100 * metros;
+                    pulgadas = 39.3701 * metros;
+
+                    System.out.println(" " + metros + " m" + " = " + km + " Km ");
+                    System.out.println(" " + metros + " m" + " = " + cm + " cm ");
+                    System.out.println(" " + metros + " m" + " = " + pulgadas + " in ");
+                    System.out.println();
+
+                    System.out.println("Presione cualquier tecla para continuar...");
+                    lector.nextLine();
+                    lector.nextLine();
+                    break;
+
+                case 3:
+                    System.out.println(" === Conversion de Centimetros ===");
+                    System.out.print(" Centimetros: ");
+                    cm = lector.nextDouble();
+
+                    km = 100000.00 * cm;
+                    metros = 0.01 * cm;
+                    pulgadas = 0.393701 * cm;
+
+                    System.out.println(" " + cm + " cm" + " = " + km + " Km ");
+                    System.out.println(" " + cm + " cm" + " = " + metros + " m ");
+                    System.out.println(" " + cm + " cm" + " = " + pulgadas + " in ");
+                    System.out.println();
+
+                    System.out.println("Presione cualquier tecla para continuar...");
+                    lector.nextLine();
+                    lector.nextLine();
+                    break;
+
+                case 4:
+                    System.out.println(" === Conversion de Pulgadas ===");
+                    System.out.print(" Pulgadas: ");
+                    pulgadas = lector.nextDouble();
+
+                    km = 0.0000254 * pulgadas;
+                    metros = 0.0254 * pulgadas;
+                    cm = 2.54 * pulgadas;
+
+                    System.out.println(" " + pulgadas + " in" + " = " + km + " Km ");
+                    System.out.println(" " + pulgadas + " in" + " = " + metros + " m ");
+                    System.out.println(" " + pulgadas + " in" + " = " + cm + " cm ");
+                    System.out.println();
+
+                    System.out.println("Presione cualquier tecla para continuar...");
+                    lector.nextLine();
+                    lector.nextLine();
+                    break;
+
+                case 5:
+                    System.out.println("Saliendo del programa...");
+                    break;
+
+                default:
+                    System.out.println("Opcion invalida");
+                    lector.nextLine();
+                    lector.nextLine(); 
+                    break;
+            }
+        } while (op != 5);
+
+	}
+
+}

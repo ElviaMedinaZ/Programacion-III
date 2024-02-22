@@ -1,0 +1,5 @@
+INDEX VERSION 1.134+C:\Users\yolye\Downloads\UABCS\4to sem\Programacion III\.metadata\.plugins\org.eclipse.jdt.core
+944858942.index
+1865797976.index
+3983028093.index
+4205513231.index
